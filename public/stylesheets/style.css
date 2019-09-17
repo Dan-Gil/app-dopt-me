@@ -36,6 +36,11 @@ a {
   color: #4ABDAC; }
 
 footer {
-  background-color: #c24523; }
+  background-color: #c24523;
+  justify-content: flex-end; }
+
+#map {
+  margin: 0 auto;
+  padding: 40px 0px; }
 
 /*# sourceMappingURL=style.css.map */
