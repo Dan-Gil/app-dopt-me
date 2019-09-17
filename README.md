@@ -1,1 +1,2 @@
-# app-dopt-me
+# App-dopt-me
+##### Adopta, no compres

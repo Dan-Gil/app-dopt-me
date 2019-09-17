@@ -1,0 +1,63 @@
+<div id="map" style="width: 800px; height: 600px"></div>
+
+
+
+<script>
+    mapboxgl.accessToken = "pk.eyJ1IjoiZGFuYmFzcyIsImEiOiJjazBkeHBub3cwYzNuM3BuMDM2c3cxbTI2In0.6YuBVPsDUuYSj-Fz2ddjrQ"
+
+    const map = new mapboxgl.Map({
+        container: "map",
+        style: "mapbox://styles/mapbox/streets-v10",
+        {{!-- center: [-99.1711, 19.399],
+        zoom: 15 --}}
+    });
+
+    map.addControl(new MapboxDirections({ accessToken: mapboxgl.accessToken }), 'top-left')
+    map.addControl(new mapboxgl.NavigationControl())
+
+
+    const marker = new mapboxgl.Marker()
+            .setLngLat([-99.1711, 19.399])
+            .addTo(map);
+
+    if (navigator.geolocation) {
+
+        navigator.geolocation.getCurrentPosition(function (position) {
+
+            const center = [
+                position.coords.longitude,
+                position.coords.latitude,
+            ];
+            map.setZoom(10).setCenter(center)
+
+            console.log('center: ', center)
+            new mapboxgl.Marker({ color: 'black' })
+                    .setLngLat(center)
+                    .setPopup(new mapboxgl.Popup().setHTML("You're here"))
+                    .addTo(map);
+        }, function () {
+
+            console.log('Error in the geolocation service.');
+        });
+    } else {
+
+        console.log('Browser does not support geolocation.');
+    }
+
+    let locations = [];
+    let names = [];
+
+        {{#each places as |place|}}
+        locations.push({{{place.location}}})
+        names.push("{{place.name}}");
+        {{/each}}
+
+    console.log(locations)
+    locations.forEach((place, i)=>{
+        let [lng,lat] = place.coordinates
+        let place_position = [lng, lat];
+        let popup = new mapboxgl.Popup().setText(names[i]);
+        let marker = new mapboxgl.Marker().setLngLat(place_position).setPopup(popup).addTo(map);
+    });
+
+</script>
