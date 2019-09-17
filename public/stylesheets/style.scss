@@ -20,6 +20,15 @@ body {
     border-radius: 50%;
 }
 
+footer{
+  background-color: #c24523;
+  justify-content: flex-end;
+}
+
+#map{
+  margin: 0 auto;
+  padding: 40px 0px;
+
 .forget-pwd > a{
     color: #dc3545;
     font-weight: 500;
@@ -53,4 +62,5 @@ img{
 }
 .forget-password .dropdown ul{
     width: 100%;
+
 }
