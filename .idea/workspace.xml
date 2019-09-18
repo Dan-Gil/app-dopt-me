@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5be8aaaf-dca9-43d2-ae1d-c298a467be09" name="Default Changelist" comment="">
+    <list default="true" id="5be8aaaf-dca9-43d2-ae1d-c298a467be09" name="Default Changelist" comment="Layout scripts optimized">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/layout.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout.hbs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -70,7 +70,7 @@
       <option name="presentableId" value="Default" />
       <updated>1568692834863</updated>
       <workItem from="1568692836189" duration="16060000" />
-      <workItem from="1568751920689" duration="26382000" />
+      <workItem from="1568751920689" duration="29063000" />
     </task>
     <task id="LOCAL-00001" summary="git ignore added&#10;README.md added">
       <created>1568693916153</created>
@@ -93,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568762962560</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Main view updated, new logo added">
+      <created>1568828722838</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1568828722838</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
