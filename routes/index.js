@@ -5,10 +5,6 @@ const Place = require('../models/Place');
 /* GET home page */
 router.get('/', (req, res, next) => {
   res.render('index');
-
-
-  // res.redirect('/login')
-
 });
 
 router.get('/contacto', (req, res) => {
