@@ -7,20 +7,23 @@
   <title>{{title}}</title>
   <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css'
     integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v3.1.6/mapbox-gl-geocoder.min.js"></script>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v3.1.6/mapbox-gl-geocoder.css" type="text/css" />
+    <link href="https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+
 </head>
 <header>
     <nav class="navbar fixed-top  navbar-dark navbar-expand-lg  navbar-custom " >
         <a class="navbar-brand navbar-header" href="/">
-            <img src="/public/images/app-dopt-me.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            <img src="/images/App-Dopt-Me_Logo.png" width="50" height="50" class="d-inline-block align-top" alt="">
             App-dopt-me!
         </a>
 
@@ -31,9 +34,10 @@
             <div class="navbar-nav">
                 <a class="nav-item nav-link active" href="/">Inicio<span class="sr-only">(current)</span></a>
                 <a class="nav-item nav-link" href="/contacto">Contacto</a>
-                <a class="nav-item nav-link" href="/">Donaciones</a>
+                <a class="nav-item nav-link" href="/donaciones">Donaciones</a>
                 <a class="nav-item nav-link" href="/login">Ingresa</a>
                 <a class="nav-item nav-link" href="/albergues">Albergues</a>
+                <a class="nav-item nav-link" href="/cita">Agenda una cita</a>
                 <a class="nav-item nav-link" href="/">Adopta</a>
 
             </div>
@@ -48,22 +52,19 @@
 
 
 <!-- Footer -->
-<footer class="page-footer font-small pt-4">
+<footer class="page-footer align-self-end font-small pt-4">
 
-    <!-- Footer Links -->
-    <div class="container-fluid text-center text-md-left">
+      <div class="container-fluid text-center text-md-left">
 
         <!-- Grid row -->
         <div class="row">
 
             <!-- Grid column -->
-            <div class="col-md-6 mt-md-0 mt-3">
+            <div class="col-md-4 mt-md-0 mt-3">
 
                 <!-- Content -->
-                <h5 class="text-uppercase">Footer Content</h5>
-                <img src="/public/images/App-Dopt-Me_Logo.png" alt="">
+                <img src="/images/App-Dopt-Me_Logo.png" class="footer-logo" alt="logo" style="width: 200px; height:auto">
 
-                <p>Here you can use rows and columns to organize your footer content.</p>
 
             </div>
             <!-- Grid column -->
@@ -71,10 +72,10 @@
             <hr class="clearfix w-100 d-md-none pb-3">
 
             <!-- Grid column -->
-            <div class="col-md-3 mb-md-0 mb-3">
+            <div class="col-md-4 mb-md-0 mb-3">
 
                 <!-- Links -->
-                <h5 class="text-uppercase">Links</h5>
+                <h5 class="text-uppercase">Accesos Rápidos</h5>
 
                 <ul class="list-unstyled">
                     <li>
@@ -95,7 +96,7 @@
             <!-- Grid column -->
 
             <!-- Grid column -->
-            <div class="col-md-3 mb-md-0 mb-3">
+            <div class="col-md-4 mb-md-0 mb-3">
 
                 <!-- Links -->
                 <h5 class="text-uppercase">Links</h5>

@@ -1,11 +1,42 @@
-body { 
-		background-color: #F9F9F9;
+body {
+    padding-top: 60px;
+    padding-left: 0px;
+    padding-right: 0px;
+    font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+    background-color: #4ABDAC;
+    color: white;
+    height: auto;
 }
 
-.container{
-	margin-top: 5%;
+a {
+    color: white;
 }
-
+a:hover{
+    color: #F7B733;
+    text-decoration: none;
+}
+.btn-success:disabled{
+    background-color: #ca952d;
+    border: none;
+}
+.btn-success{
+    background-color: #F7B733;
+    border: none;
+}
+.btn-success:hover{
+background-color: #ffbd35;
+    border: none;
+}
+.btn-primary {
+    background-color: #F7B733;
+    border: none;
+}
+.footer-logo{
+    padding: 20px;
+}
+.forma-contacto{
+    padding-top: 50px;
+}
 .card-header {
     padding: 5px 15px;
 }
@@ -20,15 +51,45 @@ body {
     border-radius: 50%;
 }
 
+.navbar-custom {
+    background-color: #FC4A1A;
+}
+.carousel-inner{
+    width: 100vw;
+    height: 50vh;
+}
+.carousel-item{
+    margin: 0 auto;
+}
+
+.card-body{
+    background-color: #f0f0f0 ;
+    color: #595959;
+}
+
+.card-deck{
+    padding: 30px 0px;
+}
+.card-footer{
+    background-color: #F7B733 ;
+    color:  #4ABDAC;
+}
+
 footer{
   background-color: #c24523;
   justify-content: flex-end;
 }
 
-#map{
-  margin: 0 auto;
-  padding: 40px 0px;
+
+#map {
+    margin: 0 auto;
+    padding: 40px 0px;
+    color: #595959;
 }
+.mapboxgl-ctrl-top-right {
+    margin: 50px 10px 0 0;
+    float: right;
+
 
 .forget-pwd > a{
     color: #dc3545;
@@ -45,10 +106,7 @@ footer{
     border-radius: 5px;
     -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-img{
-    width:40%;
-    margin-bottom:10%;
-}
+
 .btnForget{
     background: #c0392b;
     border:none;
@@ -61,7 +119,8 @@ img{
 .forget-password .dropdown button{
     width: 100%;
 }
+
 .forget-password .dropdown ul{
     width: 100%;
-
 }
+
