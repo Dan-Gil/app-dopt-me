@@ -26,4 +26,8 @@ router.get('/donaciones', (req, res) => {
   res.render('donaciones');
 });
 
+router.get('/cita', (req, res) => {
+  res.render('cita');
+});
+
 module.exports = router;
