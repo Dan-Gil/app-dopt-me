@@ -22,4 +22,8 @@ router.get('/albergues', (req, res, next) => {
   });
 });
 
+router.get('/donaciones', (req, res) => {
+  res.render('donaciones');
+});
+
 module.exports = router;

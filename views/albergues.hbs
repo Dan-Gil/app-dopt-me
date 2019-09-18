@@ -1,5 +1,23 @@
-<div id="map" style="width: 800px; height: 600px"></div>
 
+<div class="container-fluid">
+
+    <div class="row mx-md-n5">
+        <div class="col px-md-7 ">
+            <div class="pl-5 pb-5">
+                <div id="map" style="width: 500px; height: 600px"></div>
+            </div>
+        </div>
+        <div class="col px-md-5">
+            <div class="pr-5 py-5 ">
+                <ul>
+                    {{#each places as |place|}}
+                        <li>{{place.name}}</li>
+                    {{/each}}
+                </ul></div>
+        </div>
+    </div>
+
+</div>
 
 
 <script>
@@ -8,17 +26,16 @@
     const map = new mapboxgl.Map({
         container: "map",
         style: "mapbox://styles/mapbox/streets-v10",
-        {{!-- center: [-99.1711, 19.399],
-        zoom: 15 --}}
+
     });
 
 
     map.addControl(new mapboxgl.NavigationControl())
 
 
-    const marker = new mapboxgl.Marker()
-            .setLngLat([-99.1711, 19.399])
-            .addTo(map);
+   // const marker = new mapboxgl.Marker()
+     //       .setLngLat([-99.1711, 19.399])
+       //     .addTo(map);
 
     if (navigator.geolocation) {
 
@@ -28,7 +45,7 @@
                 position.coords.longitude,
                 position.coords.latitude,
             ];
-            map.setZoom(10).setCenter(center)
+            map.setZoom(11).setCenter(center)
 
             console.log('center: ', center)
             new mapboxgl.Marker({ color: 'black' })

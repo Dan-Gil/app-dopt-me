@@ -8,14 +8,33 @@ body {
   height: auto; }
 
 a {
-  color: #4ABDAC; }
+  color: white; }
 
-.btn-primary {
-  background-color: #fc4a1a;
+a:hover {
+  color: #F7B733;
+  text-decoration: none; }
+
+.btn-success:disabled {
+  background-color: #ca952d;
   border: none; }
 
-.container {
-  margin-top: 5%; }
+.btn-success {
+  background-color: #F7B733;
+  border: none; }
+
+.btn-success:hover {
+  background-color: #ffbd35;
+  border: none; }
+
+.btn-primary {
+  background-color: #F7B733;
+  border: none; }
+
+.footer-logo {
+  padding: 20px; }
+
+.forma-contacto {
+  padding-top: 50px; }
 
 .card-header {
   padding: 5px 15px; }
@@ -47,7 +66,7 @@ a {
   padding: 30px 0px; }
 
 .card-footer {
-  background-color: #f0f0f0;
+  background-color: #F7B733;
   color: #4ABDAC; }
 
 footer {
@@ -58,6 +77,10 @@ footer {
   margin: 0 auto;
   padding: 40px 0px;
   color: #595959; }
+
+.mapboxgl-ctrl-top-right {
+  margin: 50px 10px 0 0;
+  float: right; }
 
 .forget-pwd > a {
   color: #dc3545;
