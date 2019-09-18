@@ -8,3 +8,6 @@ npm-debug.log
 .env
 
 utils
+.vscode
+.idea
+.gitignore
