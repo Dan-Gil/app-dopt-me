@@ -43,5 +43,6 @@ function checkLogin(idForm) {
 isRefugee.addEventListener('change', e => {
   if (isRefugee.checked) {
     document.createElement('div')
+    console.log("algo")
   }
 })
