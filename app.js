@@ -12,7 +12,7 @@ const passport = require('./config/passport') // Se importa el passport configur
 const session = require('express-session') //  Importamos el manejador de sesiones de express
 
 mongoose
-  .connect('mongodb://localhost/animals-refugee', { useNewUrlParser: true })
+  .connect('mongodb://localhost/app-dopt-me', { useNewUrlParser: true })
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })

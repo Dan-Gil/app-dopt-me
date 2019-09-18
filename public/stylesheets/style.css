@@ -1,5 +1,18 @@
 body {
-  background-color: #F9F9F9; }
+  padding-top: 60px;
+  padding-left: 0px;
+  padding-right: 0px;
+  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+  background-color: #4ABDAC;
+  color: white;
+  height: auto; }
+
+a {
+  color: #4ABDAC; }
+
+.btn-primary {
+  background-color: #fc4a1a;
+  border: none; }
 
 .container {
   margin-top: 5%; }
@@ -16,36 +29,12 @@ body {
   -webkit-border-radius: 50%;
   border-radius: 50%; }
 
-.forget-pwd > a {
-  color: #dc3545;
-  font-weight: 500; }
+.navbar-custom {
+  background-color: #FC4A1A; }
 
-.forget-password .panel-default {
-  padding: 31%;
-  margin-top: -27%; }
-
-.forget-password .panel-body {
-  padding: 15%;
-  margin-bottom: -50%;
-  background: #fff;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
-
-img {
-  width: 40%;
-  margin-bottom: 10%; }
-
-.btnForget {
-  background: #c0392b;
-  border: none; }
-
-.forget-password .dropdown {
-  width: 100%;
-  border: 1px solid #ced4da;
-  border-radius: .25rem; }
-
-.forget-password .dropdown button {
-  width: 100%; }
+.carousel-inner {
+  width: 100vw;
+  height: 50vh; }
 
 .carousel-item {
   margin: 0 auto; }
@@ -67,10 +56,37 @@ footer {
 
 #map {
   margin: 0 auto;
-  padding: 40px 0px; }
+  padding: 40px 0px;
+  color: #595959; }
+
+.forget-pwd > a {
+  color: #dc3545;
+  font-weight: 500; }
+
+.forget-password .panel-default {
+  padding: 31%;
+  margin-top: -27%; }
+
+.forget-password .panel-body {
+  padding: 15%;
+  margin-bottom: -50%;
+  background: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+
+.btnForget {
+  background: #c0392b;
+  border: none; }
+
+.forget-password .dropdown {
+  width: 100%;
+  border: 1px solid #ced4da;
+  border-radius: .25rem; }
+
+.forget-password .dropdown button {
+  width: 100%; }
 
 .forget-password .dropdown ul {
   width: 100%; }
-
 
 /*# sourceMappingURL=style.css.map */
