@@ -3,8 +3,8 @@ const router = express.Router();
 
 /* GET home page */
 router.get('/', (req, res, next) => {
-  // res.render('index');
-  res.redirect('/login')
+  res.render('index');
+  // res.redirect('/login')
 });
 
 module.exports = router;
