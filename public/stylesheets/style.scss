@@ -6,15 +6,18 @@ body {
     background-color: #4ABDAC;
     color: white;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-a {
+footer{a {
     color: white;
 }
 a:hover{
     color: #F7B733;
     text-decoration: none;
-}
+}}
 .btn-success:disabled{
     background-color: #ca952d;
     border: none;
@@ -32,13 +35,69 @@ background-color: #ffbd35;
     border: none;
 }
 .footer-logo{
-    padding: 20px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
 }
+.contacto-fondo-texto{
+    background-image: url("/images/heatset-dog.jpg");
+    background-position: right bottom, left ;
+    background-repeat: no-repeat, repeat;
+
+}
+.adopta-fondo-texto{
+    background-image: url("/images/dog-cat-bg.jpg");
+    background-position: center bottom ;
+    background-repeat: no-repeat, repeat;
+}
+
 .forma-contacto{
-    padding-top: 50px;
+    padding: 50px 60px;
+    background-color: #4eb1d2;
 }
+
+.texto-contenido-fondo{
+    background-image: url("/images/cat-sm.jpg");
+    background-position: right bottom, left ;
+    background-repeat: no-repeat, repeat;
+}
+.texto-contenido{
+    text-align: justify;
+    background-color: #ffffff;
+    font-size: 1.7rem;
+    color: #595959;
+    padding: 100px 40px;
+}
+.texto-donativos{
+    text-align: justify;
+    font-size: 2rem;
+    color: #ffffff;
+    padding: 100px 40px;
+}
+
+.texto-lista{
+    padding: 20px 70px ;
+    text-align: justify;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+.list-unstyled{
+    li{
+        padding: 10px;
+    }
+}
+.lista-sm{
+    font-size: 1rem;
+}
+.fa-paw{
+    font-size: 16px;
+    padding-bottom: 5px;
+}
+
+
 .card-header {
     padding: 5px 15px;
+    color: #595959;
 }
 
 .profile-img {
@@ -76,23 +135,77 @@ background-color: #ffbd35;
 }
 
 footer{
-  background-color: #c24523;
-  justify-content: flex-end;
+  background-color: #114B5F;
+    margin-top: auto;
+  }
+
+
+.footer-redes-icon{
+    width: 30px;
+    height: auto;
+    margin: 0 auto;
 }
-
-
 #map {
     margin: 0 auto;
     padding: 40px 0px;
     color: #595959;
 }
 .mapboxgl-ctrl-top-right {
-
     margin: 50px 10px 0 0;
     float: right;
+}
+
+.fecha-picker{
+    flex-wrap: nowrap;
+}
+
+.login-encabezado{
+    padding-top: 50px;
+    background-image: url("https://lawson.appfoliowebsites6.com/wp-content/uploads/sites/6306/2017/09/Dog-email.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+    background-position:50% 50%;
+}
+.forma-login{
+    padding: 50px 60px;
 
 }
 
+.cita-encabezado{
+    padding-top: 50px;
+    background-image: url("http://mondoblog.org/wp-content/uploads/2017/11/295915277_f71d0aaa99_b.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+    background-position:50% 60%;
+}
+.agenda-cita{
+    padding: 100px;
+}
+.donaciones-encabezado{
+    background-image: url("https://cdn.mos.cms.futurecdn.net/yJbkm6eEvvzY2mqmUohppm.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 45vh;
+    background-position:50% 50%;
+}
+
+.contacto-encabezado{
+    background-image: url("http://www.hslcnm.org/wp-content/uploads/2014/03/dog-cat-on-grass.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 45vh;
+    background-position:50% 90%;
+}
+
+.adopta-encabezado{
+    background-image: url("https://images-i.jpimedia.uk/imagefetch/c_fill,f_auto,h_1209,q_auto:eco,w_1700/https://inews.co.uk/wp-content/uploads/2018/04/Screen-Shot-2018-04-24-at-14.13.56.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 45vh;
+    background-position:50% 50%;
+}
 .forget-pwd > a{
     color: #dc3545;
     font-weight: 500;

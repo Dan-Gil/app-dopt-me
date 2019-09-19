@@ -34,4 +34,8 @@ router.get('/cita', (req, res) => {
   res.render('cita');
 });
 
+router.get('/adopta', (req, res) => {
+  res.render('adopta');
+});
+
 module.exports = router;
