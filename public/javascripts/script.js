@@ -83,7 +83,6 @@ isRefugee.addEventListener('change', e => {
     inputGroupRS.appendChild(inputGroupTextRS)
     formGroupRS.appendChild(inputGroupRS)
     formGroupRS.appendChild(inputFormControlRS)
-    // console.log(preLastElement)
     const preLastElementRS = document.querySelector('#signup').childNodes[document.querySelector('#signup').childNodes.length - 6]
     document.querySelector('#signup').insertBefore(formGroupRS, preLastElementRS)
 
@@ -109,7 +108,7 @@ isRefugee.addEventListener('change', e => {
     const preLastElementRSN = document.querySelector('#signup').childNodes[document.querySelector('#signup').childNodes.length - 6]
     document.querySelector('#signup').insertBefore(formGroupRSN, preLastElementRSN)
 
-    // Refugee's col
+    // Refugee's suburb
     const formGroupRC = document.createElement('div')
     formGroupRC.setAttribute('class', 'form-group input-group')
     formGroupRC.setAttribute('id', 'rc')
@@ -122,7 +121,7 @@ isRefugee.addEventListener('change', e => {
     const inputFormControlRC = document.createElement('input')
     inputFormControlRC.setAttribute('class', 'form-control')
     inputFormControlRC.setAttribute('placeholder', 'Colonia')
-    inputFormControlRC.setAttribute('name', 'refugeeCol')
+    inputFormControlRC.setAttribute('name', 'refugeeSuburb')
     inputFormControlRC.setAttribute('type', 'text')
     inputGroupTextRC.appendChild(iconRC)
     inputGroupRC.appendChild(inputGroupTextRC)
@@ -152,19 +151,42 @@ isRefugee.addEventListener('change', e => {
     formGroupRCT.appendChild(inputFormControlRCT)
     const preLastElementRCT = document.querySelector('#signup').childNodes[document.querySelector('#signup').childNodes.length - 6]
     document.querySelector('#signup').insertBefore(formGroupRCT, preLastElementRCT)
-    console.log("algo")
+
+    // Refugee's Country
+    const formGroupRCntry = document.createElement('div')
+    formGroupRCntry.setAttribute('class', 'form-group input-group')
+    formGroupRCntry.setAttribute('id', 'rcntry')
+    const inputGroupRCntry = document.createElement('div')
+    inputGroupRCntry.setAttribute('class', 'input-group-prepend')
+    const inputGroupTextRCntry = document.createElement('span')
+    inputGroupTextRCntry.setAttribute('class', 'input-group-text plr-15')
+    const iconRCntry = document.createElement('i')
+    iconRCntry.setAttribute('class', 'fa fa-address-book')
+    const inputFormControlRCntry = document.createElement('input')
+    inputFormControlRCntry.setAttribute('class', 'form-control')
+    inputFormControlRCntry.setAttribute('placeholder', 'País')
+    inputFormControlRCntry.setAttribute('name', 'refugeeCountry')
+    inputFormControlRCntry.setAttribute('type', 'text')
+    inputGroupTextRCntry.appendChild(iconRCntry)
+    inputGroupRCntry.appendChild(inputGroupTextRCntry)
+    formGroupRCntry.appendChild(inputGroupRCntry)
+    formGroupRCntry.appendChild(inputFormControlRCntry)
+    const preLastElementRCntry = document.querySelector('#signup').childNodes[document.querySelector('#signup').childNodes.length - 6]
+    document.querySelector('#signup').insertBefore(formGroupRCntry, preLastElementRCntry)
   } else {
     const name = document.querySelector('#rn')
     const street = document.querySelector('#rs')
     const number = document.querySelector('#rsn')
     const col = document.querySelector('#rc')
     const city = document.querySelector('#rct')
+    const country = document.querySelector('#rcntry')
     const form = document.querySelector('#signup')
     form.removeChild(name)
     form.removeChild(street)
     form.removeChild(number)
     form.removeChild(col)
     form.removeChild(city)
+    form.removeChild(country)
 
   }
 })
