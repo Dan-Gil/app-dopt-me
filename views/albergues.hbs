@@ -9,9 +9,9 @@
         </div>
         <div class="col px-md-5">
             <div class="pr-5 py-5 ">
-                <ul>
+                <ul class="list-unstyled">
                     {{#each places as |place|}}
-                        <li>{{place.name}}</li>
+                        <a href="/albergues/{{place.id}}"><li>{{place.name}}</li></a>
                     {{/each}}
                 </ul></div>
         </div>
