@@ -13,6 +13,7 @@ const session = require('express-session') //  Importamos el manejador de sesion
 
 mongoose
   .connect('mongodb+srv://dan:1234@cluster0-f894s.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true })
+  //.connect('mongodb://localhost/app-dopt-me', { useNewUrlParser: true })
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })

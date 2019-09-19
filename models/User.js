@@ -11,7 +11,8 @@ const userSchema = new Schema(
       type: String,
       enum: ['PENDING', 'ACTIVE'],
       default: 'PENDING'
-    }
+    },
+    confirmCode: String
   },
   {
     timestamps: true,
