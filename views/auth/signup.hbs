@@ -2,26 +2,27 @@
   <article class="card-body mx-auto" style="max-width: 400px;">
     <h4 class="card-title mt-3 text-center">Crea una Cuenta</h4>
     <p class="text-center">Empieza a recibir todos nuestros beneficios con tu nueva cuenta</p>
-    
-    
-    <form id="signup">
+    {{#if error}}
+    <p class="color-danger">{{message}}</p>
+    {{/if}}
+    <form id="signup" method="POST" action="/signup">
       <div class="form-group input-group">
         <div class="input-group-prepend">
           <span class="input-group-text"> <i class="fa fa-user-tag"></i> </span>
         </div>
-        <input name="" class="form-control" placeholder="Nombre" type="text">
+        <input name="name" class="form-control" placeholder="Nombre" type="text">
       </div> <!-- form-group// -->
       <div class="form-group input-group">
         <div class="input-group-prepend">
           <span class="input-group-text"> <i class="fa fa-user-plus"></i> </span>
         </div>
-        <input name="" class="form-control" placeholder="Apellidos" type="text">
+        <input name="lastName" class="form-control" placeholder="Apellidos" type="text">
       </div> <!-- form-group// -->
       <div class="form-group input-group">
         <div class="input-group-prepend">
           <span class="input-group-text" style="padding-right:14px; padding-left:14px"> <i class="fa fa-envelope"></i> </span>
         </div>
-        <input name="" class="form-control" placeholder="Correo electrónico" type="email">
+        <input name="email" class="form-control" placeholder="Correo electrónico" type="email">
       </div> <!-- form-group// -->
       <div class="form-group input-group">
         <div class="input-group-prepend">
@@ -48,6 +49,5 @@
     </form>
   </article>
 </div> <!-- card.// -->
-
 </div>
 <!--container end.//-->

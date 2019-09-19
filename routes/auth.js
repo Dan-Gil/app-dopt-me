@@ -1,23 +1,61 @@
-// const express = require('express')
 const router = require('express').Router()
 const passport = require('../config/passport')
 const User = require('../models/User')
-// const ensureLogin = require('connect-ensure-login')
+const Profile = require('../models/Profile')
+const Refugee = require('../models/Refugee')
 
 // ############# Signup
 router.get('/signup', (req, res, next) => {
-  res.render('auth/signup') //Reutilizando vistas
+  res.render('auth/signup')
 })
 
 router.post('/signup', async (req, res, next) => {
-  try {
-    const user = await User.register({ ...req.body }, req.body.password) // 1er arg: todo lo que será el registro, 2o arg: lo que quiero que sea el password
-    console.log(user)
-    res.redirect('/login')
+  // try {
+  const { name, lastName, email, refugee } = req.body
+  let refugeeData = ''
+  let role = 'ADOPTER'
+  //const user = await User.register({ email }, req.body.password) // 1er arg: todo lo que será el registro, 2o arg: lo que quiero que sea el password
+  const user = await User.register({ email }, req.body.password) //, async function (err, user) {
+  // if (err) {
+  //   console.log(err);
+  //   return res.render('signup', { error: true, message: 'Ha ocurrido un error, intenta nuevamente :(' });
+  // } else {
+  //   await passport.authenticate('local')(req, res, function () {
+  //     res.redirect('/signup/success');
+  //   });
+  // }
+  //});
+  // });
+  if (refugee) {
+    role = 'REPRESENT'
+    const { refugeeName, refugeeStreet, refugeeStreetNumber, refugeeSuburb, refugeeCity, refugeeCountry } = req.body
+    refugeeData = {
+      name: refugeeName,
+      address: {
+        street: refugeeStreet,
+        streetNumber: refugeeStreetNumber,
+        suburb: refugeeSuburb,
+        city: refugeeCity,
+        country: refugeeCountry
+      }
+    }
+    await Refugee.create({ represent: user.id, refugeeData })
   }
-  catch (e) {
-    res.send('El usuario ya existe')
-  }
+  await Profile.create({ name, lastName, user: user._id, role })
+  res.redirect('/signup/success')
+  // }
+  // catch (e) {
+  //   await User.findByIdAndDelete(req.user.id)
+  //   res.send('El usuario ya existe ' + e)
+  // }
+})
+
+router.get('/signup/success', (req, res, next) => {
+  // TODO: Traer user_id desde ruta anterior
+  console.log("user en success:" + Object.keys(req.session.cookie))
+  res.render('signup-success', {
+    name: req.user.profile.name, _email: req.user.email,
+  })
 })
 
 // ########### Login
