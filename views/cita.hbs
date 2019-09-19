@@ -1,8 +1,12 @@
-<link href="https://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
-<link href="dist/css/window-date-picker.css" rel="stylesheet">
 
-<div class="container">
-  <div class="offset-md-3 col-md-5">
+
+<div class="container-fluid ">
+    <div class="row">
+        <div class="col-12 cita-encabezado">
+
+        </div>
+    </div>
+  <div class="offset-md-3 col-md-5 agenda-cita">
 <h2>Agenda una cita</h2>
   
 <form action="/contacto" method="POST">
@@ -24,12 +28,11 @@
   <input type="text" class="form-control" type="tel" value="+52-(555)-555-5555">
     
     </div>
- <div id="picker"></div>
-  <input id="demo">
-  <button id="toggle">Agenda</button>
-
-
-
+ <div class=" form-row fecha-picker " >
+  <input type="date" class="form-control" id="demo">
+  <button class="btn btn-secondary ml-2" id="toggle">Agenda</button>
+  </div>
+<p>     </p>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 </div>

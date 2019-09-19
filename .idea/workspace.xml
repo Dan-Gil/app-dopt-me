@@ -1,9 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5be8aaaf-dca9-43d2-ae1d-c298a467be09" name="Default Changelist" comment="Layout scripts optimized">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="5be8aaaf-dca9-43d2-ae1d-c298a467be09" name="Default Changelist" comment="Layout scripts sort and optimized">
+      <change afterPath="$PROJECT_DIR$/public/images/cat-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/cat-sm.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/dog-cat-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/fb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/heatset-dog.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/ig.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/paw-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/paw-yellow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/tw.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/adopta.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/auth/login.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/auth/login.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/cita.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/cita.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/contacto.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/contacto.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/donaciones.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/donaciones.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/layout.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout.hbs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,14 +55,16 @@
     <property name="NewWatcherDialog.advanced.open" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/.env" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Handlebars" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.16.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/views" />
     <property name="nodejs_interpreter_path" value="$USER_HOME$/.nvm/versions/node/v10.16.0/bin/node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/views" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -70,7 +91,7 @@
       <option name="presentableId" value="Default" />
       <updated>1568692834863</updated>
       <workItem from="1568692836189" duration="16060000" />
-      <workItem from="1568751920689" duration="29063000" />
+      <workItem from="1568751920689" duration="61089000" />
     </task>
     <task id="LOCAL-00001" summary="git ignore added&#10;README.md added">
       <created>1568693916153</created>
@@ -100,7 +121,28 @@
       <option name="project" value="LOCAL" />
       <updated>1568828722838</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Layout scripts optimized">
+      <created>1568828916220</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1568828916220</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Layout scripts optimized">
+      <created>1568829509693</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1568829509693</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Layout scripts sort and optimized">
+      <created>1568830989614</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1568830989614</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +177,8 @@
     <MESSAGE value="Layout" />
     <MESSAGE value="Main view updated" />
     <MESSAGE value="Main view updated, new logo added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Main view updated, new logo added" />
+    <MESSAGE value="Layout scripts optimized" />
+    <MESSAGE value="Layout scripts sort and optimized" />
+    <option name="LAST_COMMIT_MESSAGE" value="Layout scripts sort and optimized" />
   </component>
 </project>
