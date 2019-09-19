@@ -50,3 +50,4 @@ const refugeeSchema = new Schema(
 )
 
 module.exports = model('Refugee', refugeeSchema)
+

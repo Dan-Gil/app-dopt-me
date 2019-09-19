@@ -2,7 +2,7 @@ body {
     padding-top: 60px;
     padding-left: 0px;
     padding-right: 0px;
-    font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+    font-family: 'Cabin', sans-serif;
     background-color: #4ABDAC;
     color: white;
     height: auto;
@@ -11,13 +11,16 @@ body {
     min-height: 100vh;
 }
 
-footer{a {
-    color: white;
-}
-a:hover{
+footer{
+    a {
+            color: white;
+        }
+    a:hover{
     color: #F7B733;
     text-decoration: none;
-}}
+        }
+    }
+
 .btn-success:disabled{
     background-color: #ca952d;
     border: none;
@@ -47,7 +50,7 @@ background-color: #ffbd35;
 }
 .adopta-fondo-texto{
     background-image: url("/images/dog-cat-bg.jpg");
-    background-position: center bottom ;
+    background-position: right bottom ;
     background-repeat: no-repeat, repeat;
 }
 
@@ -64,13 +67,13 @@ background-color: #ffbd35;
 .texto-contenido{
     text-align: justify;
     background-color: #ffffff;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     color: #595959;
     padding: 100px 40px;
 }
 .texto-donativos{
     text-align: justify;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #ffffff;
     padding: 100px 40px;
 }
@@ -78,7 +81,7 @@ background-color: #ffbd35;
 .texto-lista{
     padding: 20px 70px ;
     text-align: justify;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #ffffff;
 }
 .list-unstyled{
@@ -87,7 +90,7 @@ background-color: #ffbd35;
     }
 }
 .lista-sm{
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 .fa-paw{
     font-size: 16px;
@@ -113,12 +116,20 @@ background-color: #ffbd35;
 .navbar-custom {
     background-color: #FC4A1A;
 }
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
 .carousel-inner{
     width: 100vw;
     height: 50vh;
 }
 .carousel-item{
     margin: 0 auto;
+}
+.modal-content{
+    color: #595959;
 }
 
 .card-body{
@@ -141,10 +152,10 @@ footer{
 
 
 .footer-redes-icon{
-    width: 30px;
+    width: 40px;
     height: auto;
-    margin: 0 auto;
-}
+   }
+
 #map {
     margin: 0 auto;
     padding: 40px 0px;

@@ -2,25 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5be8aaaf-dca9-43d2-ae1d-c298a467be09" name="Default Changelist" comment="Layout scripts sort and optimized">
-      <change afterPath="$PROJECT_DIR$/public/images/cat-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/cat-sm.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/dog-cat-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/fb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/heatset-dog.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/ig.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/paw-white.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/paw-yellow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/tw.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/adopta.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/adoptables-detalle.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/adoptables.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Refugee.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Refugee.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/stylesheets/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/auth/login.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/auth/login.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/cita.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/cita.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/contacto.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/contacto.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/adopta.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/adopta.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/albergues.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/albergues.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/donaciones.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/donaciones.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/layout.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout.hbs" afterDir="false" />
@@ -60,7 +51,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/views" />
     <property name="nodejs_interpreter_path" value="$USER_HOME$/.nvm/versions/node/v10.16.0/bin/node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -91,7 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1568692834863</updated>
       <workItem from="1568692836189" duration="16060000" />
-      <workItem from="1568751920689" duration="61089000" />
+      <workItem from="1568751920689" duration="79834000" />
     </task>
     <task id="LOCAL-00001" summary="git ignore added&#10;README.md added">
       <created>1568693916153</created>
