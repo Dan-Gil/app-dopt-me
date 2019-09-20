@@ -12,8 +12,9 @@ Además de mantener una difusión constante de campañas de esterilización y va
 
 [App-dopt-me](http://radiant-basin-72837.herokuapp.com/)
 
+[![logo](https://i.ibb.co/9cty8Dd/App-Dopt-Me-sm.png)](http://radiant-basin-72837.herokuapp.com/)
 
-![logo](https://i.ibb.co/9cty8Dd/App-Dopt-Me-sm.png)
+
 
 
 ## Credenciales
