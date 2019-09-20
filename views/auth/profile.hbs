@@ -1,5 +1,50 @@
-<h2>Bienvenido {{name}} {{lastname}}</h2>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 perfil-encabezado">
 
-<a href="/logout">
-  <button>Logout</button>
-</a>
+        </div>
+    </div>
+<div class="row">
+    <div class="col-12 ">
+        <h2 class="text-center">Bienvenido {{name}} {{lastName}}</h2>
+    </div>
+<div class="row">
+    <div class="col-12">
+        <h4 class="text-center">¿Qué quieres hacer?</h4>
+
+               <a href="/cita" class="text-center">
+            <button class="btn btn-primary">Agenda una cita</button>
+        </a>
+        <a href="/adopta" class="text-center">
+            <button class="btn btn-primary">Adopta</button>
+        </a>
+        <a href="/donaciones" class="text-center">
+            <button class="btn btn-primary">Dona</button>
+        </a>
+        <a href="/logout" class="text-center">
+            <button class="btn btn-primary">Logout</button>
+        </a>
+    </div>
+</div>
+
+
+</div>
+ <!--   <div class="form-group col-6">
+
+    <form action="/adoptables/add" method="post" enctype="multipart/form-data">
+        <h4>Agrega fotos de tu refugio:</h4>
+        <input class="form-control-file" type="file" name="photo">
+        <input type="submit" value="SAVE">
+        <h4>Agrega fotos de tu adoptable:</h4>
+        <label>Nombre</label>
+        <input class="form-control" type="text" name="name">
+
+        <label>Especie</label>
+        <input class="form-control" type="text" name="specie">
+
+        <label>Foto</label>
+        <input class="form-control-file" type="file" name="photo">
+        <input type="submit" value="SAVE">
+    </form>
+</div>-->
+</div>
