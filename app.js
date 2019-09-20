@@ -72,11 +72,10 @@ app.locals.title = 'App-dopt-me - ¡Bienvenido!';
 
 
 const index = require('./routes/index');
-const user = require('./routes/user');
-const auth = require('./routes/auth'); // Se agrega la nueva ruta
-app.use('/', auth); //  Se agrega el prefijo 'auth' para que la ruta 'auth' lo maneje
+const auth = require('./routes/auth') // Se agrega la nueva ruta
+const user = require('./routes/user')
+app.use('/', auth) //  Se agrega el prefijo 'auth' para que la ruta 'auth' lo maneje
 app.use('/', index);
-app.use('/', user);
-
+app.use('/', user)
 
 module.exports = app;

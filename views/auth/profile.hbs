@@ -7,11 +7,63 @@
     <div class="col-12 ">
         <h2 class="text-center">Bienvenido {{name}} {{lastName}}</h2>
     </div>
-<div class="row">
+<div class="row w-100">
     <div class="col-12">
         <h4 class="text-center">¿Qué quieres hacer?</h4>
+<div class="accordion" id="accordionExample">
+    <div class="card">
+        <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    Agregar fotos de tu refugio
+                </button>
+            </h2>
+        </div>
 
-               <a href="/cita" class="text-center">
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+                <form action="/refugee/uploads/photos" method="post" enctype="multipart/form-data">
+                    <input type="file" name="photo">
+                    <input type="submit" value="Subir">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="false" aria-controls="collapseTwo">
+                    Fotos de tus adoptables
+                </button>
+            </h2>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+            <form action="/refugee/uploads/pets" method="POST" enctype="multipart/form-data">
+                <p>Datos de tu adoptable</p>
+                <label>Nombre</label>
+                <input type="text" name="name">
+                
+                <label>Especie</label>
+                {{!-- <input type="text" name="species"> --}}
+                <select name="species">
+                    <option value="Perro">Perro</option>
+                    <option value="Gato">Gato</option>
+                </select>
+                <label>Raza</label>
+                <input type="text" name="breed">
+
+                <label>Foto</label>
+                <input type="file" name="photo">
+                <input type="submit" value="Subir">
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
+               {{!-- <a href="/cita" class="text-center">
             <button class="btn btn-primary">Agenda una cita</button>
         </a>
         <a href="/adopta" class="text-center">
@@ -19,7 +71,7 @@
         </a>
         <a href="/donaciones" class="text-center">
             <button class="btn btn-primary">Dona</button>
-        </a>
+        </a> --}}
         <a href="/logout" class="text-center">
             <button class="btn btn-primary">Logout</button>
         </a>
