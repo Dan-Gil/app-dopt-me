@@ -15,6 +15,7 @@ router.get('/contacto', (req, res) => {
 
 router.post('/contacto')
 
+
 router.get('/albergues', (req, res, next) => {
   Place.find().then(places => {
     // console.log(places);
