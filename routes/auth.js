@@ -116,13 +116,12 @@ router.post('/signup', async (req, res, next) => {
 router.get('/auth/confirm/:confirmCode', async (req, res, next) => {
   const { confirmCode } = req.params
   await User.findOneAndUpdate({ confirmCode }, { confirmCode: null }, async (err, user) => {
-    console.log('user:' + user)
+
     if (user === null) {
       res.render('auth/email-verification', { message: 'The validation key is invalid!', validation: false });
       return
     }
     user.status = 'ACTIVE'
-    console.log(user)
     const { name } = await Profile.findOne({ user: user._id })
     await user.save(err => {
       if (err) {
@@ -131,7 +130,7 @@ router.get('/auth/confirm/:confirmCode', async (req, res, next) => {
       }
       res.render('auth/email-verification', { title: '¡Activación exitosa!', message: `Hola ${name}, se ha activado tu cuenta satisfactoriamente, puedes ingresar a tu perfil desde <a href="/login">aquí.</a>`, validation: true })
     })
-  }).populate()
+  })
 })
 
 // ########### Login
@@ -144,13 +143,84 @@ router.get('/login', (req, res, next) => {
 })
 
 router.post('/login', passport.authenticate('local', { failureRedirect: '/login?loginFail=true' }), (req, res, next) => {
-  console.log(req.user, req.session)
   res.redirect('/profile')
 })
 
 // ########### Forgot
 router.get('/forgot', (req, res, next) => {
   res.render('auth/forgot')
+})
+
+router.post('/forgot', async (req, res, next) => {
+  const confirmCode = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
+  const port = req.app.settings.port || process.env.PORT;
+  const host = req.protocol + '://' + req.hostname + (port == 80 || port == 443 ? '' : ':' + port);
+  const { email } = req.body
+  console.log("email:" + email)
+  const user = await User.findOneAndUpdate({ email }, { confirmCode })
+  console.log('user' + user)
+  const profile = await Profile.findOne({ user: user._id })
+  console.log("Profile:" + profile)
+  const html = `
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+    </head>
+
+    <body>
+      <h2>Recuperación de contraseña</h2>
+      <p>¡Hola ${profile.name}!</p>
+      <p>Has recibido este mensaje porque solicitaste un cambio de contraseña.</p>
+      <p>Haz click en el siguiente enlace para cambiarla:</p>
+      <a href="${host}/forgot/confirm/${confirmCode}">${host}/forgot/confirm/${confirmCode}</a>
+      <br><br>
+      <img src="https://res.cloudinary.com/app-cdn/image/upload/v1568914888/imgs/App-Dopt-Me_Logo_yp9ylc.png"
+        alt="app-dopt-me-logo" width="80px">
+      <p><i class="fas fa-paw"></i>- El equipo de App-dopt-me</p>
+    </body>
+    </html>
+    `
+  const transporter = nodemailer.createTransport({
+    service: 'Gmail',
+    auth: {
+      user: process.env.EMAIL,
+      pass: process.env.EMAIL_PASSWORD,
+    }
+  })
+
+  const info = await transporter.sendMail({
+    from: `App-dopt-me <${process.env.EMAIL}>`,
+    to: email,
+    subject: 'App-dopt-me: Reinicio de contraseña',
+    text: `Has recibido este correo porque solicitaste un reinicio de contraseña.
+    Copia y pega este enlace en una ventana nueva de tu navegador: ${host}/forgot/confirm/${confirmCode}
+    - El equipo de App-dopt-me`,
+    html
+  })
+  res.render('auth/forgot-success', { name: profile.name, email: user.email })
+})
+
+router.get('/forgot/confirm/:id', async (req, res, next) => {
+  const { id } = req.params
+  const user = await User.findOne({ confirmCode: id })
+  if (user === null) {
+    res.render('auth/email-verification', { title: '¡Ha ocurrido un error!', message: 'Código de confirmación inválido' })
+    return
+  }
+  res.render('auth/password-reset', { email: user.email, id })
+})
+
+router.post('/forgot/confirm/:id', async (req, res, next) => {
+  const { password } = req.body
+  const { id } = req.params
+  const user = await User.findOne({ confirmCode: id })
+  console.log('user:' + user)
+  user.setPassword(password, function () {
+    user.confirmCode = null
+    user.save();
+    res.redirect('/login')
+  });
 })
 
 // ########### Profile
