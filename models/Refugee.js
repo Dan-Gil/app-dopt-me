@@ -24,20 +24,8 @@ const refugeeSchema = new Schema(
     ],
     pets: [
       {
-        name: String,
-        species: {
-          ref: 'Species',
-          type: Schema.Types.ObjectId
-        },
-        race: String,
-        photos: [
-          {
-            url: String,
-            name: String
-          }
-        ],
-        owner: {
-          ref: 'User',
+        pet: {
+          ref: 'Pet',
           type: Schema.Types.ObjectId
         }
       }

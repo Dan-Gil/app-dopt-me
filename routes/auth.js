@@ -20,17 +20,18 @@ router.post('/signup', async (req, res, next) => {
   if (refugee) {
     role = 'REPRESENT'
     const { refugeeName, refugeeStreet, refugeeStreetNumber, refugeeSuburb, refugeeCity, refugeeCountry } = req.body
-    refugeeData = {
-      name: refugeeName,
-      address: {
-        street: refugeeStreet,
-        streetNumber: refugeeStreetNumber,
-        suburb: refugeeSuburb,
-        city: refugeeCity,
-        country: refugeeCountry
-      }
-    }
-    await Refugee.create({ represent: user.id, refugeeData })
+    // refugeeData = {
+    //   name: refugeeName,
+    //   address: {
+    //     street: refugeeStreet,
+    //     streetNumber: refugeeStreetNumber,
+    //     suburb: refugeeSuburb,
+    //     city: refugeeCity,
+    //     country: refugeeCountry
+    //   }
+    // }
+    console.log("refugeeData: " + refugeeData)
+    await Refugee.create({ represent: user.id, name, address: { street: refugeeStreet, streetNumber: refugeeStreetNumber, suburb: refugeeSuburb, city: refugeeCity, country: refugeeCountry } })
   }
   const profile = await Profile.create({ name, lastName, user: user._id, role })
 
