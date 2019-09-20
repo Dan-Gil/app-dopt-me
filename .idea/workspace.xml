@@ -2,25 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5be8aaaf-dca9-43d2-ae1d-c298a467be09" name="Default Changelist" comment="Layout scripts sort and optimized">
-      <change afterPath="$PROJECT_DIR$/views/adoptables-detalle.hbs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/adoptables.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/cloudinary.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Refugee.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Refugee.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/news.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/stylesheets/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/adopta.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/adopta.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/adoptables-detalle.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/adoptables-add.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/adoptables.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/adoptables.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/albergues.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/albergues.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/auth/login.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/auth/login.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/auth/profile.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/auth/profile.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/auth/signup.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/auth/signup.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/donaciones.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/donaciones.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/layout.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/news/create-new.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/news/news.hbs" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -82,7 +95,7 @@
       <option name="presentableId" value="Default" />
       <updated>1568692834863</updated>
       <workItem from="1568692836189" duration="16060000" />
-      <workItem from="1568751920689" duration="79834000" />
+      <workItem from="1568751920689" duration="98722000" />
     </task>
     <task id="LOCAL-00001" summary="git ignore added&#10;README.md added">
       <created>1568693916153</created>
