@@ -9,6 +9,15 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+
+}
+
+a{
+    color: #F7B733;
+}
+a:hover{
+    color: #FC4A1A;
+    text-decoration: none;
 }
 
 footer{
@@ -20,6 +29,22 @@ footer{
     text-decoration: none;
         }
     }
+
+
+
+.btn-link{
+        color: #ced4da;
+    text-decoration: none;
+}
+.btn-link:visited{
+    color: #ced4da;
+    text-decoration: none;
+}
+.btn-link:hover{
+    color: white;
+    text-decoration: none;
+}
+
 
 .btn-success:disabled{
     background-color: #F7B733;
@@ -65,6 +90,7 @@ background-color: #ffbd35;
     background-repeat: no-repeat, repeat;
 }
 .texto-contenido{
+
     text-align: justify;
     background-color: #ffffff;
     font-size: 1.5rem;
@@ -102,6 +128,7 @@ background-color: #ffbd35;
     padding: 5px 15px;
     color: #595959;
 }
+
 
 .profile-img {
     width: 96px;
