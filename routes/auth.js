@@ -31,7 +31,7 @@ router.post('/signup', async (req, res, next) => {
     //   }
     // }
     console.log("refugeeData: " + refugeeData)
-    await Refugee.create({ represent: user.id, name, address: { street: refugeeStreet, streetNumber: refugeeStreetNumber, suburb: refugeeSuburb, city: refugeeCity, country: refugeeCountry } })
+    await Refugee.create({ represent: user.id, refugeeName, address: { street: refugeeStreet, streetNumber: refugeeStreetNumber, suburb: refugeeSuburb, city: refugeeCity, country: refugeeCountry } })
   }
   const profile = await Profile.create({ name, lastName, user: user._id, role })
 
@@ -229,6 +229,29 @@ router.get('/profile', isLoggedIn, async (req, res, next) => {
   const { user } = req
   const { name, lastName } = await Profile.findOne({ user: user.id })
   res.render('auth/profile', { name, lastName })
+  // console.log((pets[0]._doc.name))
+})
+
+router.post('/refugee/find/pets', async (req, res, next) => {
+  const { petName } = req.body
+  const { user } = req
+  console.log("petname:" + petName)
+  const { pets } = await Refugee.findOne({ represent: user.id }).populate('pet')
+  let pet = ''
+  console.log(pets)
+  for (let i = 0; i < pets.length; i++) {
+    if (pets[i]._doc.name === petName) {
+      pet = pets[i]._doc
+      break
+    }
+  }
+  let perro = false
+  let gato = false
+  console.log(pet)
+  if (pet.species === 'Perro') perro = true
+  else if (pet.species === 'Gato') gato = true
+  if (perro) { res.render('auth/profile', { pet, perro }) }
+  else if (gato) { res.render('auth/profile', { pet, gato }) }
 })
 
 // ########### Logout
