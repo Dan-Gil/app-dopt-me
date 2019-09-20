@@ -22,7 +22,7 @@ footer{
     }
 
 .btn-success:disabled{
-    background-color: #ca952d;
+    background-color: #F7B733;
     border: none;
 }
 .btn-success{
@@ -170,19 +170,14 @@ footer{
     flex-wrap: nowrap;
 }
 
-.login-encabezado{
+.login-encabezado {
     padding-top: 50px;
     background-image: url("https://lawson.appfoliowebsites6.com/wp-content/uploads/sites/6306/2017/09/Dog-email.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 50vh;
-    background-position:50% 50%;
+    background-position: 50% 50%;
 }
-.forma-login{
-    padding: 50px 60px;
-
-}
-
 .cita-encabezado{
     padding-top: 50px;
     background-image: url("http://mondoblog.org/wp-content/uploads/2017/11/295915277_f71d0aaa99_b.jpg");
@@ -191,6 +186,15 @@ footer{
     height: 50vh;
     background-position:50% 60%;
 }
+.perfil-encabezado{
+    padding-top: 50px;
+    background-image: url("https://www.nirvanatails.com/uploads/8/3/4/4/83446752/cat-and-dog-with-grass_1_orig.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+    background-position:50% 60%;
+}
+
 .agenda-cita{
     padding: 100px;
 }

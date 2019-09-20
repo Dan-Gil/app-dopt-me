@@ -6,8 +6,8 @@
 
     <div class="row text-center text-lg-left">
 
-  <!--      <div class="col-lg-3 col-md-4 col-6">
-   // {{#each albergue.pets as |pet|}}
+        <div class="col-lg-3 col-md-4 col-6">
+   {{#each albergue.pets as |pet|}}
             <a href="#" class="d-block mb-4 h-100">
                 <img class="img-fluid img-thumbnail" src="{{pet.photo.[0].url}}" alt="" data-toggle="modal" data-target="#exampleModalCenter">
             </a>
@@ -31,12 +31,10 @@
                         <div class="modal-body">
                             <div class="text-center">
                                 <i class="fas fa-check fa-4x mb-3 animated rotateIn"></i>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit iusto nulla aperiam blanditiis ad
-                                    consequatur
-                                    in dolores culpa, dignissimos, eius non possimus fugiat. Esse ratione fuga, enim, ab officiis totam.
+                                <p>Hola! yo puedo ser tu nuevo mejor amigo, me llamo {{pet.name}}! Ven a conocerme!.
                                 </p>
                             </div>
-                            <img src="http://www.dogshomepa.org/wp-content/uploads/Rottie-leash.jpg"  class="img-fluid">
+                            <img src={{pet.photo.[1].url}}  class="img-fluid">
 
                         </div>
 
@@ -52,7 +50,7 @@
                 </div>
             </div>
         {{/each}}
-        </div>-->
+        </div>
 
 
         <div class="col-lg-3 col-md-4 col-6">
