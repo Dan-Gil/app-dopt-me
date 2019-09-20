@@ -5,9 +5,9 @@
     <hr class="mt-2 mb-5">
 
     <div class="row text-center text-lg-left">
-
+{{#each albergue.pets as |pet|}}
         <div class="col-lg-3 col-md-4 col-6">
-   {{#each albergue.pets as |pet|}}
+
             <a href="#" class="d-block mb-4 h-100">
                 <img class="img-fluid img-thumbnail" src="{{pet.photo.[0].url}}" alt="" data-toggle="modal" data-target="#exampleModalCenter">
             </a>
