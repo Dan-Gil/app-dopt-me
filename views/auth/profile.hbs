@@ -61,6 +61,39 @@
             </form>
             </div>
         </div>
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
+                        aria-expanded="false" aria-controls="collapseThree">
+                        Edita/elimina adoptables
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                    <form action="/refugee/find/pets" method="POST" >
+                        <p>Buscar a tu adoptable</p>
+                        <label>Nombre</label>
+                        <input type="text" name="petName" value="{{pet.name}}">
+                        
+                        <label>Especie</label>
+                        {{!-- <input type="text" name="species"> --}}
+                        <select name="species">
+                            <option value="Perro" {{#if perro}}selected{{/if}}>Perro</option>
+                            <option value="Gato" {{#if gato}}selected{{/if}}>Gato</option>
+                        </select>
+                        <label>Raza</label>
+                        <input type="text" name="breed" value="{{pet.breed}}">
+            
+                        {{!-- <label>Foto</label> --}}
+                        {{!-- <input type="text" name="photo" value={{pet.photo}}>
+                        <input type="file" name="photo"> --}}
+                        <input type="submit" value="Buscar" >
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
                {{!-- <a href="/cita" class="text-center">
