@@ -62,7 +62,6 @@ app.use(require('node-sass-middleware')({
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
 
 
@@ -73,8 +72,9 @@ app.locals.title = 'App-dopt-me - ¡Bienvenido!';
 
 const index = require('./routes/index');
 const auth = require('./routes/auth') // Se agrega la nueva ruta
+const user = require('./routes/user')
 app.use('/', auth) //  Se agrega el prefijo 'auth' para que la ruta 'auth' lo maneje
 app.use('/', index);
-
+app.use('/', user)
 
 module.exports = app;

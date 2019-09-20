@@ -15,17 +15,10 @@ router.get('/contacto', (req, res) => {
 
 router.post('/contacto')
 
-router.post('/movie/add', uploadCloud.single('photo'), async (req, res) => {
-  const {title, description} = req.body;
-  const {url: imgPath, originalname: imgName} = req.file;
-  await Movie.create({title, description, imgPath, imgName});
-  res.redirect('/');
-});
-
 router.get('/albergues', (req, res, next) => {
   Place.find().then(places => {
-    console.log(places);
-    res.render('albergues', {places});
+    // console.log(places);
+    res.render('albergues', { places });
   });
 });
 
@@ -52,12 +45,7 @@ router.get('/adoptables', (req, res) => {
   res.render('adoptables');
 });*/
 
-router.get('/albergues/:id',(req, res, next) =>{
-  const {id} = req.params
-  const albergue = Refugee.findOne(id)
-  res.render('adoptables',{albergue})
-  console.log(albergue)
-})
+
 
 
 
